@@ -1,43 +1,40 @@
- <h4>Select Blackbox</h4>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                </span>Content</a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in">
-            <ul class="list-group">
-              <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Articles</a></li>
+<h4>Select Blackbox</h4>
+<div class="panel-group" id="accordion">
 
-              <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="http://fb.com/moinakbarali">News</a></li>
+  <div class="panel panel-default" *ngFor="let content of data">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#group{{content.id}}">
+          <span class="glyphicon glyphicon-folder-close">
+          </span>{{content.name}}
+           <input type="checkbox" class="checkList" name="checkbox" id="item_{{content.id}}" />
 
-              <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="http://fb.com/moinakbarali">Newsletters</a></li>
+        </a>
+      </h4>
+    </div>
+    <div id="group{{content.id}}" class="panel-collapse collapse">
+      <div class="list-group">
 
-              <li class="list-group-item"> <span class="glyphicon glyphicon-comment text-success"></span><a href="http://fb.com/moinakbarali">Comments</a><span class="badge">42</span></li>
+        <div *ngFor="let group of content.devices">
 
-            </ul>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-                </span>Reports</a>
-            </h4>
-          </div>
-          <div id="collapseFour" class="panel-collapse collapse">
-            <div class="list-group">
-              <a href="#" class="list-group-item active">
-                Cras justo odio
+          <a href="#" class="list-group-item">
+               {{group.name}}
+               <input type="checkbox" class="checkList" name="checkbox" id="item_{{group.id}}" />
               </a>
-              <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-              <a href="#" class="list-group-item">Morbi leo risus</a>
-              <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-              <a href="#" class="list-group-item">Vestibulum at eros</a>
-            </div>
-          </div>
+
         </div>
-  
+
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- class="panel-collapse collapse in">
+            <ul class="list-group">
+              <li class="list-group-item"  *ngFor="let group of content.devices">
+                <span class="glyphicon glyphicon-pencil text-primary"></span>
+                <a href="http://fb.com/moinakbarali">{{group.name}}</a>
+              </li>
+            </ul> -->

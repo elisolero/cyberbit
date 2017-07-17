@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {DeviceService} from '../device.service';
 
 @Component({
@@ -10,14 +10,14 @@ import {DeviceService} from '../device.service';
 export class AccordionComponent implements OnInit {
 
   data;
+  device_groups = [];
 
   constructor(private deviceService: DeviceService) {
   
    }
 
   ngOnInit() {
-    this.data =  this.deviceService.getDevices();
-    console.log(this.data)
+    this.data =   this.deviceService.getDevices()[0].device_groups;
   }
 
 }
