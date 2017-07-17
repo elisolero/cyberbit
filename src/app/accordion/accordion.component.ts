@@ -9,12 +9,15 @@ import {DeviceService} from '../device.service';
 })
 export class AccordionComponent implements OnInit {
 
+  data;
+
   constructor(private deviceService: DeviceService) {
   
    }
 
   ngOnInit() {
-    return this.deviceService.devices;
+    this.data =  this.deviceService.getDevices();
+    console.log(this.data)
   }
 
 }

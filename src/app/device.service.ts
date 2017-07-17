@@ -7,11 +7,11 @@ export class DeviceService {
 
   constructor() { }
 
-  // getDevices(){
-  //   return this.devices;
-  // }
+  getDevices(){
+    return JSON.parse(this.devices);
+  }
 
-   devices = `{{
+   devices = `{
 	"device_groups": [{
 		"id": "1",
 		"name": "group 1",
@@ -140,8 +140,6 @@ export class DeviceService {
         "id": 4,
         "name": "Last 24 Hours"
     }]
-}
-
 }`
 }
 
