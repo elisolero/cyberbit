@@ -12,6 +12,7 @@ export class AccordionComponent implements OnInit {
   data;
   device_groups = [];
 
+
   constructor(private deviceService: DeviceService) {
   
    }
