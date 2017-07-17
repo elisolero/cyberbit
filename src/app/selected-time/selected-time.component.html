@@ -2,8 +2,7 @@
 
     <div class="funkyradio">
         <div class="funkyradio-default"  *ngFor="let time of data">
-            <input type="checkbox"  class="select_time" data-name="{{time.name}}" name="checkbox" id="time_{{time.id}}" />
+            <input type="checkbox"  class="select_time" value="{{time.id}}" name="{{time.name}}" id="time_{{time.id}}" />
             <label for="checkbox1">{{time.name}}</label>
         </div>
-    
     </div>

@@ -2,7 +2,7 @@
  
     <div class="funkyradio">
         <div class="funkyradio-default"  *ngFor="let protocol of data">
-            <input type="checkbox" class="select_protocol" data-name="{{protocol.name}}" name="checkbox" id="protocol_{{protocol.id}}" />
+            <input type="checkbox" class="select_protocol" value="{{protocol.id}}" data-name="{{protocol.name}}" name="checkbox" id="protocol_{{protocol.id}}" />
             <label for="checkbox1">{{protocol.name}}</label>
         </div>
     

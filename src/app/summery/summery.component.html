@@ -1,6 +1,5 @@
 <h4>Summery</h4>
 
-
 <div class="panel-group" >
 
   <div class="panel panel-default" *ngFor="let content of data">
@@ -12,7 +11,7 @@
     <div id="group{{content.id}}" class="panel-collapse ">
       <div class="list-group">
         <div *ngFor="let item of content.devices">
-          <a href="#"  id="summery_item_{{item.id}}" style="display:none;" class="list-group-item">{{item.name}}</a>
+          <a href="#"  value="{item.id}}" name="{{item.id}}" id="summery_item_{{item.id}}" style="display:none;" class="list-group-item devicesIds">{{item.name}}</a>
         </div>
       </div>
     </div>
@@ -27,4 +26,9 @@
       <ul class="summery_time">
       </ul>
   </div>
+
+
 </div>
+<span><a id="clearData" href="#">Clear</a></span>
+<input type="text" id="allData">
+<button id="startLearning" type="button" class="btn btn-primary">Strat Learning</button>

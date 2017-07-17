@@ -13,7 +13,7 @@
       <div class="list-group">
         <div *ngFor="let group of content.devices">
           <a href="#" class="list-group-item">{{group.name}}
-            <input type="checkbox" onclick="" class="innerItems checkList" name="checkbox" id="item_{{group.id}}" />
+            <input type="checkbox" value="{{group.id}}" class="innerItems checkList" name="checkbox" id="item_{{group.id}}" />
           </a>
         </div>
       </div>
