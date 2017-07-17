@@ -48,21 +48,41 @@ export class AccordionComponent implements OnInit {
           }
        });
 
-
+    //Append Protocol Items for Summery
     $('.select_protocol').each(function(){
         var name = $(this).attr('name');
         var id = $(this).attr('id');
         $('.summery_protocol').append('<li style="display:none;" id="summery_'+id+'" >'+name+'</li>')
-    })
-       $(document).on('change','.select_protocol',function(){
-            var id = $(this).attr('id');
-        if($(this).is(':checked')){
-            $('#summery_'+id).show();
-         }else{
-           $('#summery_'+id).hide();
-         }
+    });
 
-        });
+    //On change Protocol Items for Summery
+    $(document).on('change','.select_protocol',function(){
+
+      var id = $(this).attr('id');
+      if($(this).is(':checked')){
+        $('#summery_'+id).show();
+      }else{
+        $('#summery_'+id).hide();
+      }
+    });
+
+    //Append Protocol Items for Summery
+    $('.select_time').each(function(){
+        var name = $(this).attr('name');
+        var id = $(this).attr('id');
+        $('.summery_time').append('<li style="display:none;" id="summery_'+id+'" >'+name+'</li>')
+    });
+
+    //On change Protocol Items for Summery
+    $(document).on('change','.select_time',function(){
+
+      var id = $(this).attr('id');
+      if($(this).is(':checked')){
+        $('#summery_'+id).show();
+      }else{
+        $('#summery_'+id).hide();
+      }
+    });
 
 
       })
