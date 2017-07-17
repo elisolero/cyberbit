@@ -1,3 +1,7 @@
 .list-group-item {
     padding: 0px 5px;
 }
+
+.panel-group .panel-heading+.panel-collapse>.panel-body, .panel-group .panel-heading+.panel-collapse>.list-group{
+    border:none
+}

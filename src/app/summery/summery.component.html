@@ -11,16 +11,20 @@
     </div>
     <div id="group{{content.id}}" class="panel-collapse ">
       <div class="list-group">
-
-        <div *ngFor="let group of content.devices">
-
-          <a href="#" class="list-group-item">
-               {{group.name}}
-              </a>
-
+        <div *ngFor="let item of content.devices">
+          <a href="#"  id="summery_item_{{item.id}}" style="display:none;" class="list-group-item">{{item.name}}</a>
         </div>
-
       </div>
     </div>
+  </div>
+<h4>Selected Protocols:</h4>
+  <div class="panel panel-default" >
+      <ul class="summery_protocol">
+      </ul>
+  </div>
+<h4>Time Periods:</h4>
+  <div class="panel panel-default" >
+      <ul class="summery_time">
+      </ul>
   </div>
 </div>
