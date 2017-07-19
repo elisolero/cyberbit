@@ -1,0 +1,13 @@
+<script>
+    var d1 = "2015-04-22T16:18:32.123Z";
+    var d2 = "2015-03-25T12:00:00Z";
+    var d3 = "2015-1-12T01:02:45.786Z";
+
+    function checkFormat(dateStr) {
+        var getDate = new Date(dateStr);  
+        return !isNaN(getDate.getDate());                                
+    }
+
+    console.log(checkFormat(d3));
+
+</script>
